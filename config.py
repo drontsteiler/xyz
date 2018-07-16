@@ -1,2 +1,2 @@
 # token of bot
-token = '604394840:AAEocphS8JSrtLG72lUyLAzFEYTWppD3kzw'
+token = '627832905:AAFbN9eW4uB-5YaecSDG4-f4UP38dIDN-Bs'
