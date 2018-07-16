@@ -8,7 +8,7 @@ def res(user_input):
     if user_input=="Хватит болтать":
         chatOn = False
         ans = "Как я могу вам помочь?"
-
+        return ans
     if user_input=="Давай поболтаем":
         chatOn = True
 
