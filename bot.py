@@ -1,4 +1,4 @@
-import spacy
+#import spacy
 import config
 import telebot
 
