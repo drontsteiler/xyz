@@ -1,5 +1,5 @@
 import config
-import spacy
+#import spacy
 import telebot
 bot = telebot.TeleBot(config.token)
 @bot.message_handler(content_types=["text"])
