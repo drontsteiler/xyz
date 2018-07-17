@@ -18,3 +18,5 @@ def res(user_input):
         ans = ner(main(user_input))
     
     return ans
+
+

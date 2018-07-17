@@ -4,6 +4,7 @@ from spacy.lang.ru import Russian
 
 from pymorphy2 import MorphAnalyzer
 from pymorphy2 import units
+import string
 
 
 import spacy
@@ -21,7 +22,11 @@ def main(uinput):
     #assert lemmas == [u'duck']
     nlp = Russian()
 
-    doc = nlp(uinput)
+    translator = str.maketrans('', '', string.punctuation)
+
+    uinput = uinput.translate(translator)
+
+    doc = nlp(uinput.lower())
 
 
 
@@ -45,3 +50,4 @@ def main(uinput):
         if word.is_stop==False:
             text = text + " " + word.lemma_
     return text
+
