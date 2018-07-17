@@ -1,2 +1,4 @@
 pyTelegramBotAPI
 spacy
+pymorphy2
+pathlib
