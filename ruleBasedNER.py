@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import spacy 
 from pathlib import Path
 from spacy.matcher import Matcher 
@@ -11,7 +12,7 @@ def add_event_ent(matcher, doc, i, matches):
 
 def ner(uinput):
     # This is the part where to loads the vocabulary
-    ans = ""
+    ans = u""
     output_dir = './kyzyl'
     nlp = spacy.load(output_dir) 
     # Creating a matcher object
@@ -21,15 +22,15 @@ def ner(uinput):
 
     patterns = {
             "year": [{'IS_DIGIT': True }], 
-            "service": [{"LOWER": "погода"}],
-            "time": [{"LOWER": "завтра"}]
+            "service": [{"LOWER": u"погода"}],
+            "time": [{"LOWER": u"завтра"}]
           }
 
     for label, pattern in patterns.items():
         matcher.add(label, add_event_ent, pattern)
 
     patterns = {
-            "time": [{"LOWER": "сегодня"}]
+            "time": [{"LOWER": u"сегодня"}]
           }
 
     for label, pattern in patterns.items():

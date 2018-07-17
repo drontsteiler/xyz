@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import spacy
 import config
 import telebot
@@ -17,12 +18,12 @@ def repeat_all_messages(message):
 
     global chatOn
 
-    if user_input=="Хватит болтать":
+    if user_input==u"Хватит болтать":
         chatOn = False
-        ans = "Как я могу вам помочь?"
+        ans = u"Как я могу вам помочь?"
         bot.send_message(message.chat.id, ans)
         return #if you remove this, it will recognize services even when the chit chat mode is on
-    if user_input=="Давай поболтаем":
+    if user_input==u"Давай поболтаем":
         chatOn = True
         
     if chatOn==True:
@@ -30,7 +31,7 @@ def repeat_all_messages(message):
     else:
         ans = ner(main(user_input))
     if ans=="":
-        ans="Не поняла. Повторите ваш запрос пожалуйста"
+        ans=u"Не поняла. Повторите ваш запрос пожалуйста"
     bot.send_message(message.chat.id, ans)
 
 if __name__ == '__main__':
